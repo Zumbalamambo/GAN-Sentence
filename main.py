@@ -50,7 +50,6 @@ for i in xrange(epoch):
 	
 	disc_loss, _ = sess.run([model.d_loss, model.d_train_opt], feed_dict = {model.noise: random_sample, model.fake_input: batch_fake, model.true_sentence: batch_true})
 	gen_loss, _ = sess.run([model.g_loss, model.g_train_opt], feed_dict = {model.noise: random_sample, model.fake_input: batch_fake, model.true_sentence: batch_true})
-	print '\n'
 	
 	# if the generator keep loosing too much, These steps may can help you:
 	# 1- you may apply generator training for twice or more. 
