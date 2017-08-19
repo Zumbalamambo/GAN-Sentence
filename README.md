@@ -12,6 +12,25 @@ GAN model is very sensitive with hyperparameters such momentum constant value, w
 3. change Adaptive RMS into pure RMS
 4. Recheck my work for generator sentence
 
+I included the essay also, but you can replaced with any essay. And the generator is word-based generator.
+
+#### Check hyperparameters in main.py first before train
+```python
+# hyperparameters
+learning_rate = 0.0001
+length_sentence = 64
+batch_size = 20
+epoch = 100
+num_layers = 2
+size_layer = 512
+len_noise = 100
+```
+
+#### Then,
+```bash
+python main.py
+```
+
 So below is the output
 ```text
 epoch: 1, discriminator loss: 1.30029, generator loss: 0.486291, s/epoch: 3.22374796867
